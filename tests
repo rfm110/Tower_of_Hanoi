@@ -1,0 +1,25 @@
+import unittest
+import tower_of_hanoi_try9
+class TestHanoi(unittest.TestCase):
+    def test_hanoi1(self):
+        expected_result = False
+        move_disk = 3
+        list_used = [1]
+        actual_result = tower_of_hanoi_try9.legal_move(move_disk, list_used)
+        self.assertTrue(expected_result-actual_result == 0)
+    def test_hanoi2(self):
+        expected_result = True
+        move_disk = 3
+        list_used = [4]
+        actual_result = tower_of_hanoi_try9.legal_move(move_disk, list_used)
+        self.assertTrue(expected_result-actual_result==0)
+    def test_hanoi3(self):
+        expected_result = True
+        move_disk = 3
+        list_used = []
+        actual_result = tower_of_hanoi_try9.legal_move(move_disk, list_used)
+        self.assertTrue(expected_result-actual_result==0)
+
+
+if __name__ == "__main__":
+    unittest.main()
