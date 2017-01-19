@@ -1,7 +1,7 @@
-def recursive_tower_of_hanoi(pin_1=[4,3,2,1], pin_2=[], pin_3=[], number_of_disks= 4):
+def recursive_tower_of_hanoi(pin_1=[4,3,2,1], pin_2=[], pin_3=[], number_of_disks=4):
     # change parameter names so they are more general? like source, target, and intermediate
 
-    if pin_3 == [4,3,2,1]:
+    if pin_3 == [4, 3, 2, 1]:
         print "Game Completed"
         return pin_1, pin_2, pin_3
     # let pin_1 be the source, pin_2 be the intermediate, and pin_3 be the destination
@@ -18,8 +18,8 @@ def recursive_tower_of_hanoi(pin_1=[4,3,2,1], pin_2=[], pin_3=[], number_of_disk
         recursive_tower_of_hanoi(pin_1, pin_3, pin_2, number_of_disks-1)
         print "number of disks a", number_of_disks
 
-        print "source",pin_1
-        print "intermediate",pin_3
+        print "source", pin_1
+        print "intermediate", pin_3
         print "target", pin_2
         print
 
@@ -44,4 +44,6 @@ def recursive_tower_of_hanoi(pin_1=[4,3,2,1], pin_2=[], pin_3=[], number_of_disk
         print "target", pin_3
         print
 
-recursive_tower_of_hanoi()
+
+if __name__ == "__main__":
+    recursive_tower_of_hanoi()
